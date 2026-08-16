@@ -2,6 +2,8 @@
 vim.cmd("startinsert")
 vim.cmd("set iskeyword-=_")
 
+eel = {}
+
 -- autocommand
 vim.api.nvim_create_autocmd({'ModeChanged'}, {
       pattern = {'*:n*'},
@@ -46,14 +48,14 @@ function eel__kill_to_end()
    vim.api.nvim_buf_set_text(buffer, r - 1, c, r - 1, line_len, {})
 end
 
-function eel_add_key(lhs, rhs)
+function eel.add_key(lhs, rhs)
    assert(type(lhs) == "string")
    assert(type(rhs) == "string")
 
    vim.keymap.set({'i', 'v', 'n'}, '<C-c>'..lhs, rhs)
 end
 
-function eel_add_CX_key(lhs, rhs)
+function eel.add_CX_key(lhs, rhs)
    assert(type(lhs) == "string")
    assert(type(rhs) == "string")
 
@@ -100,3 +102,4 @@ vim.keymap.set('v', '<C-w>', 'd')
 vim.keymap.set('v', '<C-g>', '<Esc>')
 vim.keymap.set({'i', 'v', 'n'}, '<M-g><M-g>', eel__goto)
 vim.cmd("set clipboard+=unnamedplus")
+return eel
