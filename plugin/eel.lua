@@ -1,5 +1,6 @@
 -- emacs.nvim
 vim.cmd("startinsert")
+vim.cmd("set iskeyword-=_")
 
 -- autocommand
 vim.api.nvim_create_autocmd({'ModeChanged'}, {
@@ -31,13 +32,15 @@ vim.keymap.set({'i', 'v', 'c'}, '<M-b>', '<C-Left>')
 vim.keymap.set({'i', 'v', 'c'}, '<C-v>', '<PageDown>')
 vim.keymap.set({'i', 'v', 'c'}, '<M-v>', '<PageUp>')
 vim.keymap.set({'i', 'v', 'c'}, '<C-d>', '<Del>')
+vim.keymap.set({'i', 'c'}, '<M-d>', "<C-o>dw")
+vim.keymap.set({'i', 'c'}, '<M-BS>', "<C-w>")
 
 -- define advanced emacs keys.
 vim.keymap.set('i', '<C-k>', eel__kill_to_end)
+
 --vim.keymap.set({'i', 'v', 'c'}, '<C-Space>', '<Esc>v')
 --vim.keymap.set('i', '<C-y>', '<Esc>pi')
---vim.keymap.set('i', '<M-d>', '<Esc>dwi')
 --vim.keymap.set('n', '<lt>', 'ggi')
---vim.keymap.set('n', '<gt>', 'Gi')
 --vim.keymap.set('v', '<M-w>', 'y')
+--vim.keymap.set('n', '<gt>', 'Gi')
 --vim.keymap.set('v', '<C-w>', 'd')
