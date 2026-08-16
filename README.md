@@ -6,6 +6,11 @@ This plugin does not aim to provide every single Emacs functionality.
 ## Installation
 
 Use `vim.pack`:
+```lua
+vim.pack.add({
+    'https://github.com/benja2998/eel.nvim',
+})
+```
 
 ## Extending eel
 
