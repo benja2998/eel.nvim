@@ -43,3 +43,7 @@ local eel = require("eel")
 eel.add_CX_key("d", "<CMD>Lex<CR>") -- C-x d
 eel.add_key("u", "<C-o><C-r>") -- C-c u
 ```
+
+## Note for using with netrw
+
+Netrw doesn't like eel forcing it into insert mode. You should prefix netrw commands (enter, %, etc) with Escape.
