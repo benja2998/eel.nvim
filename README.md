@@ -1,5 +1,7 @@
 # eel.nvim
 
+![demo](demo.mp4)
+
 eel (extensible emacs layer) is a plugin for Neovim that changes Neovim to use Emacs keybinds.
 This plugin does not aim to provide every single Emacs functionality.
 
