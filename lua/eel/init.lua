@@ -104,5 +104,7 @@ vim.keymap.set('v', '<M-w>', 'y')
 vim.keymap.set('v', '<C-w>', 'd')
 vim.keymap.set('v', '<C-g>', '<Esc>')
 vim.keymap.set({'i', 'v', 'n'}, '<M-g><M-g>', eel__goto)
+vim.o.ttimeoutlen = 0
+vim.o.timeoutlen = 250
 vim.cmd("set clipboard+=unnamedplus")
 return eel
