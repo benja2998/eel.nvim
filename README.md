@@ -41,4 +41,5 @@ require('lualine').setup()
 
 local eel = require("eel")
 eel.add_CX_key("d", "<CMD>Lex<CR>")
+eel.add_key("u", "<C-o><C-r>")
 ```
