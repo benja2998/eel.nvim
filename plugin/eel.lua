@@ -41,6 +41,8 @@ vim.keymap.set('i', '<Esc>>', "<C-o>G<C-o>$")
 
 -- define advanced emacs keys.
 vim.keymap.set('i', '<C-k>', eel__kill_to_end)
+vim.keymap.set('i', '<C-x><C-s>', "<C-o>:w<CR>")
+vim.keymap.set('i', '<C-x>s', "<C-o>:wa<CR>")
 
 --vim.keymap.set({'i', 'v', 'c'}, '<C-Space>', '<Esc>v')
 --vim.keymap.set('i', '<C-y>', '<Esc>pi')
