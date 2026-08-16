@@ -64,6 +64,7 @@ end
 
 -- define basic emacs keys.
 vim.o.ttimeoutlen = 50
+vim.o.timeoutlen = 50
 vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-n>', '<Down>')
 vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-p>', '<Up>')
 vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-f>', '<Right>')
