@@ -19,13 +19,15 @@ function eel__kill_to_end()
 end
 
 -- define basic emacs keys.
-vim.keymap.set({'i', 'v', 'c'}, '<C-n>', '<Down>')
-vim.keymap.set({'i', 'v', 'c'}, '<C-p>', '<Up>')
-vim.keymap.set({'i', 'v', 'c'}, '<C-f>', '<Right>')
-vim.keymap.set({'i', 'v', 'c'}, '<C-b>', '<Left>')
-vim.keymap.set({'i', 'v', 'c'}, '<C-a>', '<Home>')
-vim.keymap.set({'i', 'v', 'c'}, '<C-e>', '<End>')
+vim.o.ttimeoutlen = 50
+vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-n>', '<Down>')
+vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-p>', '<Up>')
+vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-f>', '<Right>')
+vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-b>', '<Left>')
+vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-a>', '<Home>')
+vim.keymap.set({'i', 'v', 'c', 'n'}, '<C-e>', '<End>')
 vim.keymap.set({'i', 'v', 'c'}, '<C-l>', '<C-o>zz')
+vim.keymap.set('n', '<C-l>', 'zz')
 vim.keymap.set({'i', 'v', 'c'}, '<M-x>', '<C-o>:')
 vim.keymap.set({'i', 'v', 'c'}, '<M-f>', '<C-Right>')
 vim.keymap.set({'i', 'v', 'c'}, '<M-b>', '<C-Left>')
@@ -34,6 +36,8 @@ vim.keymap.set({'i', 'v', 'c'}, '<M-v>', '<PageUp>')
 vim.keymap.set({'i', 'v', 'c'}, '<C-d>', '<Del>')
 vim.keymap.set({'i', 'c'}, '<M-d>', "<C-o>dw")
 vim.keymap.set({'i', 'c'}, '<M-BS>', "<C-w>")
+vim.keymap.set('i', '<M-LT>', "<C-o>gg")
+vim.keymap.set('i', '<Esc>>', "<C-o>G<C-o>$")
 
 -- define advanced emacs keys.
 vim.keymap.set('i', '<C-k>', eel__kill_to_end)
